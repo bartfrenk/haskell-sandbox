@@ -1,0 +1,652 @@
+
+./app/Main.hs,52
+module Main Main0,1
+main main2,3
+main main3,4
+
+./src/example.hs,29
+say say7,8
+main main9,10
+
+./src/Experiment/Experiment.hs,865
+data MyError MyError13,14
+data MyError = MyError MyError13,14
+data MySecondError MySecondError16,17
+data MySecondError = MySecondError MySecondError16,17
+bla bla19,20
+bla bla20,21
+catcher catcher22,23
+catcher catcher23,24
+test test26,27
+test test27,28
+pureCatcher pureCatcher31,32
+pureCatcher pureCatcher32,33
+seqList seqList35,36
+seqList seqList36,37
+seqList' seqList'39,40
+pingpong pingpong41,42
+pingpong pingpong42,43
+main main55,56
+main main56,57
+wrap wrap62,63
+wrap wrap63,64
+data MutexState MutexState70,71
+data MutexState = Holder Holder70,71
+data MutexState = Holder | NonHolderNonHolder70,71
+data Mutex Mutex72,73
+data Mutex (a a72,73
+  Create Create73,74
+  WithHolder WithHolder74,75
+data Mutex (a a72,73
+acquire acquire76,77
+acquire acquire77,78
+release release81,82
+release release82,83
+
+./src/FreeMonads/Simplest.hs,363
+module Main Main1,2
+data ChoiceF ChoiceF5,6
+data ChoiceF a = Choice Choice5,6
+type ChoiceM ChoiceM7,8
+type ChoiceM a a7,8
+instance instance9,10
+data WriteF WriteF12,13
+data WriteF a = Write Write12,13
+type Write Write14,15
+logger' logger'16,17
+logger' logger'17,18
+logger logger19,20
+logger logger20,21
+main main25,26
+main main26,27
+
+./src/FreeMonads/Scratch.hs,1857
+module Scratch Scratch4,5
+data CloudFilesF CloudFilesF13,14
+  = SaveFile SaveFile14,15
+  | ListFiles ListFiles15,16
+type Path Path18,19
+type Bytes Bytes20,21
+instance instance23,24
+saveFile saveFile29,30
+saveFile saveFile34,35
+listFiles listFiles36,37
+listFiles listFiles37,38
+data Level Level41,42
+data Level = Debug Debug41,42
+data Level = Debug | Info Info41,42
+data Level = Debug | Info | Warning Warning41,42
+data Level = Debug | Info | Warning | Error Error41,42
+data LogF LogF42,43
+data LogF a = Log Log42,43
+log log44,45
+log log45,46
+interpretLog interpretLog48,49
+interpretLog interpretLog49,50
+data RestF RestF57,58
+data RestF a = Get Get57,58
+             | Put Put58,59
+             | Put Path Bytes (Bytes -> a) -- | TODO: TODO:58,59
+get get61,62
+get get62,63
+put put64,65
+put put65,66
+interpretCloudWithRest interpretCloudWithRest68,69
+interpretCloudWithRest interpretCloudWithRest69,70
+interpretCloudWithLogging interpretCloudWithLogging79,80
+interpretCloudWithLogging interpretCloudWithLogging80,81
+interpretRest interpretRest93,94
+interpretRest interpretRest96,97
+sampleProgram sampleProgram108,109
+sampleProgram sampleProgram109,110
+runSampleProgram runSampleProgram113,114
+runSampleProgram runSampleProgram114,115
+sampleCloudFilesProgram sampleCloudFilesProgram117,118
+sampleCloudFilesProgram sampleCloudFilesProgram118,119
+runSampleCloudProgram runSampleCloudProgram125,126
+runSampleCloudProgram runSampleCloudProgram126,127
+runSampleCloudProgram1 runSampleCloudProgram1130,131
+runSampleCloudProgram1 runSampleCloudProgram1131,132
+(>*)>*139,140
+(>(141,142
+interpretCloudInSum interpretCloudInSum146,147
+programInSum programInSum148,149
+interpretCloudInIO interpretCloudInIO150,151
+collapse collapse152,153
+collapse collapse154,155
+
+./src/FreeMonads/CloudFiles.hs,1476
+module CloudFiles CloudFiles7,8
+type Path Path15,16
+type Bytes Bytes16,17
+data CloudFilesF CloudFilesF18,19
+  = SaveFile SaveFile19,20
+  | ListFiles ListFiles20,21
+type CloudFilesM CloudFilesM22,23
+saveFile saveFile24,25
+saveFile saveFile25,26
+listFiles listFiles27,28
+listFiles listFiles28,29
+data Level Level32,33
+data Level = Debug Debug32,33
+data Level = Debug | Info Info32,33
+data Level = Debug | Info | Warning Warning32,33
+data Level = Debug | Info | Warning | Error Error32,33
+data LogF LogF34,35
+data LogF a = Log Log34,35
+type LogM LogM36,37
+log log38,39
+log log39,40
+data RestF RestF43,44
+  = Get Get44,45
+  | Put Put45,46
+type RestM RestM47,48
+get get49,50
+get get50,51
+put put52,53
+put put53,54
+restCloudFilesTerm restCloudFilesTerm63,64
+restCloudFilesTerm restCloudFilesTerm64,65
+ioRestTerm ioRestTerm72,73
+ioRestTerm ioRestTerm73,74
+ioRest ioRest80,81
+ioRest ioRest81,82
+ioLogTerm ioLogTerm83,84
+ioLogTerm ioLogTerm84,85
+ioLog ioLog88,89
+ioLog ioLog89,90
+logCloudFilesTerm logCloudFilesTerm92,93
+logCloudFilesTerm logCloudFilesTerm93,94
+cloudFilesProgram cloudFilesProgram102,103
+cloudFilesProgram cloudFilesProgram103,104
+logProgram:logProgram110,111
+logProgram logProgram111,112
+(|+>)|+>116,117
+(|(119,120
+collapseWith collapseWith124,125
+collapseWith collapseWith125,126
+ioCloudFiles ioCloudFiles130,131
+ioCloudFiles ioCloudFiles131,132
+(|>>)|>>135,136
+
+./src/FreeMonads/FreeMonad.hs,1501
+module FreeMonad FreeMonad2,3
+type Bytes Bytes13,14
+type Path Path14,15
+data CloudFilesF CloudFilesF16,17
+  = SaveFile SaveFile17,18
+  | ListFiles ListFiles18,19
+instance instance20,21
+type CloudFilesAPI CloudFilesAPI24,25
+type CloudFilesAPI a a24,25
+saveFile saveFile26,27
+saveFile saveFile27,28
+listFiles listFiles29,30
+listFiles listFiles30,31
+data HttpF HttpF32,33
+  = GET GET33,34
+  | PUT PUT34,35
+  | POST POST35,36
+  | DELETE DELETE36,37
+type HttpAPI HttpAPI38,39
+httpI httpI40,41
+httpI httpI41,42
+data Level Level43,44
+data Level = Debug Debug43,44
+data Level = Debug | Info Info43,44
+data Level = Debug | Info | Warn Warn43,44
+data Level = Debug | Info | Warn | Error Error43,44
+data LogF LogF45,46
+data LogF a = Log Log45,46
+type LogAPI LogAPI47,48
+log log49,50
+log log50,51
+logI logI52,53
+logI logI53,54
+constLogI constLogI56,57
+constLogI constLogI57,58
+constLog constLog59,60
+constLog constLog60,61
+program program62,63
+program program63,64
+type CombinedF CombinedF69,70
+type CombinedAPI CombinedAPI71,72
+get get73,74
+get get74,75
+put put76,77
+put put77,78
+interpretCloudWithRest interpretCloudWithRest80,81
+interpretCloudWithRest interpretCloudWithRest81,82
+combinedI combinedI90,91
+combinedI combinedI91,92
+combinedInterpreter combinedInterpreter103,104
+combinedInterpreter combinedInterpreter104,105
+data Hom Hom110,111
+data Hom a b = Hom Hom110,111
+type HomFree HomFree115,116
+
+./src/FreeMonads/Toy.hs,836
+module Toy Toy2,3
+data ToyF ToyF6,7
+data ToyF a next = Env Env6,7
+data ToyF a next = Env a (a -> next) | Output Output6,7
+data ToyF a next = Env a (a -> next) | Output a next | Bell Bell6,7
+data ToyF a next = Env a (a -> next) | Output a next | Bell next | DoneDone6,7
+type ToyM ToyM9,10
+type ToyM a a9,10
+env env11,12
+env env12,13
+output output14,15
+output output15,16
+data LogF LogF17,18
+data LogF next = Log Log17,18
+type LogM LogM20,21
+data MachineF MachineF22,23
+data MachineF a next = Read Read22,23
+data MachineF a next = Read (a -> next) | Write Write22,23
+data MachineF a next = Read (a -> next) | Write a next | Ping Ping22,23
+data MachineF a next = Read (a -> next) | Write a next | Ping next | StopStop22,23
+type MachineM MachineM25,26
+program program27,28
+program program28,29
+
+./src/FreeMonads/Lib.hs,65
+module LibLib0,1
+someFunc someFunc4,5
+someFunc someFunc5,6
+
+./src/FreeMonads/Interpreter.lhs,93
+ data CloudFilesF CloudFilesF2,3
+   = SaveFile SaveFile3,4
+   | ListFiles ListFiles4,5
+
+./src/AWS/S3.hs,248
+module AWS.S3 AWS.S33,4
+putExample putExample12,13
+putExample putExample13,14
+listBucketsExample listBucketsExample36,37
+listBucketsExample listBucketsExample37,38
+assumeRoleTest assumeRoleTest51,52
+assumeRoleTest assumeRoleTest52,53
+
+./src/AWS/ListTurbineFiles.hs,444
+module AWS.ListTurbineFiles AWS.ListTurbineFiles1,2
+listTurbineFiles listTurbineFiles11,12
+listTurbineFiles listTurbineFiles12,13
+listAllBuckets listAllBuckets19,20
+listAllBuckets listAllBuckets20,21
+assumeDeveloperRole assumeDeveloperRole28,29
+assumeDeveloperRole assumeDeveloperRole29,30
+extractCredentials extractCredentials38,39
+extractCredentials extractCredentials39,40
+devCreds devCreds49,50
+devCreds devCreds50,51
+
+./src/FunctionalSystems/PayloadPhantom.hs,669
+module PayloadPhantomPayloadPhantom2,3
+type Name Name23,24
+data Part Part25,26
+data Part = Part Part25,26
+      name name26,27
+    , fileName fileName27,28
+    , contentType contentType28,29
+    , body body29,30
+type Param Param32,33
+type ContentType ContentType34,35
+data Payload Payload36,37
+data Payload a = NoPayloadNoPayload36,37
+               | Raw Raw37,38
+               | Params Params38,39
+               | FormData FormData39,40
+param param42,43
+param param43,44
+filePart filePart45,46
+filePart filePart46,47
+fileString fileString50,51
+fileString fileString51,52
+addParams addParams54,55
+instance instance56,57
+
+./src/FunctionalSystems/rock2solution.hs,777
+module Main Main0,1
+data Move Move6,7
+data Move = Rock Rock6,7
+data Move = Rock | Paper Paper6,7
+data Move = Rock | Paper | Scissors Scissors6,7
+data Outcome Outcome8,9
+data Outcome = Lose Lose8,9
+data Outcome = Lose | Tie Tie8,9
+data Outcome = Lose | Tie | Win Win8,9
+outcome outcome11,12
+outcome outcome12,13
+parseMove parseMove18,19
+parseMove parseMove19,20
+getMove getMove24,25
+getMove getMove25,26
+computerVsUser computerVsUser31,32
+computerVsUser computerVsUser32,33
+withTty withTty37,38
+withTty withTty38,39
+withClient withClient40,41
+withClient withClient41,42
+withClient' withClient'50,51
+withClient' withClient'51,52
+main main59,60
+main main60,61
+webServerAddr webServerAddr63,64
+webServerAddr webServerAddr64,65
+
+./src/FunctionalSystems/Benchmark.hs,52
+module Main Main1,2
+main main6,7
+main main7,8
+
+./src/FunctionalSystems/Space.hs,66
+module Main Main0,1
+main main9,10
+main main10,11
+x x18,19
+
+./src/FunctionalSystems/Testing.hs,660
+module FunctionalSystems.Testing FunctionalSystems.Testing2,3
+encodeChar encodeChar14,15
+encodeChar encodeChar15,16
+testOne testOne22,23
+testOne testOne23,24
+testASCII testASCII27,28
+testASCII testASCII28,29
+prop_encodeOne prop_encodeOne30,31
+prop_encodeOne prop_encodeOne31,32
+prop_encodeBigChar prop_encodeBigChar33,34
+prop_encodeBigChar prop_encodeBigChar34,35
+data Modal Modal36,37
+    PossiblePossible37,38
+  | NecessaryNecessary38,39
+  | ContingentContingent39,40
+  | ImpossibleImpossible40,41
+newtype BigChar BigChar43,44
+newtype BigChar = Big Big43,44
+instance instance46,47
+prop_encodeOne5 prop_encodeOne558,59
+
+./src/FunctionalSystems/ShrinkChar.hs,113
+newtype BigChar BigChar6,7
+newtype BigChar = Big Big6,7
+instance instance9,10
+shrinkChar shrinkChar17,18
+
+./src/FunctionalSystems/Performance.hs,66
+module Performance Performance1,2
+len0 len03,4
+len0 len04,5
+
+./src/Remember/Misc.hs,113
+module Misc Misc3,4
+a a14,15
+a a15,16
+b b17,18
+b b18,19
+c c20,21
+c c21,22
+(=(23,24
+(====~23,24
+
+./src/TestHarness/TestHarness.hs,379
+module TestHarness TestHarness0,1
+data PropositionProposition2,3
+data ManageF ManageF4,5
+  = ListPropositions ListPropositions5,6
+--type --type7,8
+data MarketMarket9,10
+data SegmentSegment11,12
+data DynamicF DynamicF13,14
+  = PushProposition PushProposition14,15
+data TurbineF TurbineF16,17
+  = GetSegments GetSegments17,18
+  | PutSegment PutSegment18,19
+
+./src/Lib.hs,65
+module LibLib0,1
+someFunc someFunc4,5
+someFunc someFunc5,6
+
+./src/Phantoms.hs,355
+data ContentType ContentType2,3
+data ContentType = ContentType ContentType2,3
+data Param Param3,4
+data Param = Param Param3,4
+data Part Part4,5
+data Part = Part Part4,5
+data Payload Payload6,7
+data Payload a = NoPayloadNoPayload6,7
+               | Raw Raw7,8
+               | Params Params8,9
+               | FormData FormData9,10
+
+./src/FuncSys/CountLines.hs,362
+main main11,12
+main main12,13
+recDir recDir14,15
+recDir recDir15,16
+readFiles readFiles26,27
+readFiles readFiles27,28
+readFiles' readFiles'31,32
+readFiles' readFiles'32,33
+countLines countLines37,38
+countLines countLines38,39
+listDir listDir51,52
+listDir listDir52,53
+listDirStream listDirStream55,56
+listDirStream listDirStream56,57
+
+./src/FuncSys/Iteratee.hs,1124
+module FuncSys.Iteratee FuncSys.Iteratee0,1
+data Chunk Chunk11,12
+data Chunk = Chunk Chunk11,12
+data Chunk = Chunk { chunkData chunkData11,12
+                   , chunkAtEOF chunkAtEOF12,13
+newtype Iter Iter14,15
+newtype Iter a = Iter Iter14,15
+newtype Iter a = Iter { runIter runIter14,15
+data Result Result16,17
+data Result a = Done Done16,17
+data Result a = Done { rResult rResult16,17
+data Result a = Done { rResult :: a, rResidual rResidual16,17
+              | NeedInput NeedInput17,18
+              | NeedIO NeedIO18,19
+              | Failed Failed19,20
+instance instance21,22
+readLine readLine27,28
+readLine readLine28,29
+type Enumerator Enumerator37,38
+type Enumerator a a37,38
+enumerateFile enumerateFile40,41
+enumerateFile enumerateFile41,42
+chunkEOF chunkEOF54,55
+chunkEOF chunkEOF55,56
+getResult0 getResult057,58
+getResult0 getResult058,59
+nlines0 nlines063,64
+nlines0 nlines064,65
+  f `fmap`fmap74,75
+iterThrow iterThrow94,95
+iterThrow iterThrow95,96
+nlines1 nlines197,98
+nlines1 nlines198,99
+nlines2 nlines2103,104
+nlines2 nlines2104,105
+
+./src/Wreq/Experiment.hs,44
+module Wreq.Experiment Wreq.Experiment1,2
+
+./src/Lenses/Scratch.hs,323
+module Lenses.Scratch Lenses.Scratch2,3
+data Atom Atom7,8
+data Atom = Atom Atom7,8
+data Atom = Atom { _element _element7,8
+data Atom = Atom { _element :: String, _point _point7,8
+data Point Point9,10
+data Point = Point Point9,10
+data Point = Point { _x _x9,10
+data Point = Point { _x :: Double, _y _y9,10
+
+./src/ParCon/Scratch.hs,76
+module ParCon.Scratch ParCon.Scratch0,1
+delay delay6,7
+delay delay7,8
+
+./src/HaxlTutorial/Scratch.hs,1466
+module HaxlTutorial.Scratch HaxlTutorial.Scratch5,6
+data PostId PostId13,14
+data Date Date15,16
+data Date = Date Date15,16
+data PostContent PostContent17,18
+data PostInfo PostInfo19,20
+data PostInfo = PostInfoPostInfo19,20
+  { postId postId20,21
+  , postDate postDate21,22
+  , postTopic postTopic22,23
+data Fetch Fetch25,26
+data Fetch a = Done Done25,26
+data Fetch a = Done a | Blocked Blocked25,26
+instance instance28,29
+getPostIds getPostIds41,42
+getPostIds getPostIds42,43
+getPostInfo getPostInfo44,45
+getPostInfo getPostInfo45,46
+getPostContent getPostContent47,48
+getPostContent getPostContent48,49
+getPostViews getPostViews50,51
+getPostViews getPostViews51,52
+data HtmlHtml53,54
+renderPosts renderPosts55,56
+renderPosts renderPosts56,57
+renderPage renderPage58,59
+renderPage renderPage59,60
+blog blog61,62
+blog blog62,63
+leftPane leftPane64,65
+leftPane leftPane65,66
+renderSidePane renderSidePane67,68
+renderSidePane renderSidePane68,69
+mainPane mainPane70,71
+mainPane mainPane71,72
+getAllPostsInfo getAllPostsInfo79,80
+getAllPostsInfo getAllPostsInfo80,81
+getPostDetails getPostDetails82,83
+getPostDetails getPostDetails83,84
+popularPosts popularPosts85,86
+popularPosts popularPosts86,87
+renderPostList renderPostList96,97
+renderPostList renderPostList97,98
+topics topics99,100
+topics topics100,101
+renderTopics renderTopics107,108
+renderTopics renderTopics108,109
+
+./src/HaxlTutorial/Fetch.hs,599
+module HaxlTutorial.Fetch HaxlTutorial.Fetch1,2
+data Request Request7,8
+data BlockedRequest BlockedRequest9,10
+  forall forall10,11
+data FetchStatus FetchStatus12,13
+  = NotFetchedNotFetched13,14
+  | FetchSuccess FetchSuccess14,15
+data Result Result16,17
+  = Done Done17,18
+  | Blocked Blocked18,19
+newtype Fetch Fetch20,21
+newtype Fetch a = Fetch Fetch20,21
+newtype Fetch a = Fetch { unFetch unFetch20,21
+instance instance22,23
+dataFetch dataFetch52,53
+dataFetch dataFetch53,54
+fetch fetch61,62
+fetch fetch62,63
+runFetch runFetch64,65
+runFetch runFetch65,66
+
+./src/HaxlTutorial/Notes.lhs,25
+ module Notes Notes1,2
+
+./src/HaxlTutorial/Render.hs,209
+module Render Render0,1
+renderPosts renderPosts2,3
+renderPosts renderPosts3,4
+renderPage renderPage5,6
+renderPage renderPage6,7
+renderSidePane renderSidePane8,9
+renderSidePane renderSidePane9,10
+
+./src/HaxlTutorial/Blog.hs,1378
+module HaxlTutorial.Blog HaxlTutorial.Blog0,1
+blog blog9,10
+blog blog10,11
+leftPane leftPane12,13
+leftPane leftPane13,14
+mainPane mainPane18,19
+mainPane mainPane19,20
+data PostId PostId27,28
+data Date Date29,30
+data Date = Date Date29,30
+data PostContent PostContent31,32
+type Topic Topic33,34
+data PostInfo PostInfo35,36
+data PostInfo = PostInfoPostInfo35,36
+  { postId postId36,37
+  , postDate postDate37,38
+  , postTopic postTopic38,39
+getPostIds getPostIds43,44
+getPostIds getPostIds44,45
+getPostInfo getPostInfo46,47
+getPostInfo getPostInfo47,48
+getPostContent getPostContent49,50
+getPostContent getPostContent50,51
+getPostViews getPostViews52,53
+getPostViews getPostViews53,54
+getAllPostsInfo getAllPostsInfo57,58
+getAllPostsInfo getAllPostsInfo58,59
+getPostDetails getPostDetails60,61
+getPostDetails getPostDetails61,62
+popularPosts popularPosts63,64
+popularPosts popularPosts64,65
+topics topics73,74
+topics topics74,75
+data Html Html80,81
+data Html = Html Html80,81
+renderPosts renderPosts82,83
+renderPosts renderPosts83,84
+renderPage renderPage85,86
+renderPage renderPage86,87
+renderSidePane renderSidePane88,89
+renderSidePane renderSidePane89,90
+renderTopics renderTopics91,92
+renderTopics renderTopics92,93
+renderPostList renderPostList94,95
+renderPostList renderPostList95,96
+
+./src/ServicePattern/Logger.hs,517
+module ServicePattern.Logger ServicePattern.Logger0,1
+data PriorityPriority6,7
+  = DebugDebug7,8
+  | InfoInfo8,9
+  | WarningWarning9,10
+  | ErrorError10,11
+newtype Handle Handle12,13
+newtype Handle = HandleHandle12,13
+  { log log13,14
+logDebug, logInfo, logWarning, logError logError15,16
+logDebug, logInfo, logWarning,logWarning15,16
+logDebug, logInfo,logInfo15,16
+logDebug,logDebug15,16
+logDebug logDebug16,17
+logInfo logInfo17,18
+logWarning logWarning18,19
+logError logError19,20
+
+./Setup.hs,15
+main main1,2
+
+./test/Spec.hs,30
+main main0,1
+main main1,2
